@@ -106,7 +106,7 @@ namespace ByteToImage
 
 
 
-            // cAMERA 
+          /*  // cAMERA 
 int[] byteImagenes = new int[]  {
     0x00,0x00,0x00,0x03,
     0x00,0x00,0x00,0x03,
@@ -143,16 +143,38 @@ int[] byteImagenes = new int[]  {
 };
 int ImageLength = 32;
 int ImageBytes = 113;
+*/
+
+
+            // Calendar
+int[] byteImagenes = new int[] {
+0xf3, 0xcf,
+    0x92, 0x49,
+    0x12, 0x48,
+    0x1e, 0x78,
+    0x00, 0x00,
+    0x00, 0x00,
+    0x7f, 0xfe,
+    0x66, 0x66,
+    0x66, 0x66,
+    0x7f, 0xfe,
+    0x7f, 0xfe,
+    0x66, 0x66,
+    0x66, 0x66,
+    0x7f, 0xfe,
+    0x3f, 0xfc,
+    0x80, 0x01
+};
+int ImageLength = 16;
+int ImageBytes = 32;
 
 
 
-
-            /* Mixer
+            /* C
 int[] byteImagenes = new int[] 
 int ImageLength = 30;
 int ImageBytes = 113;
 */
-
             int rowCounter = 0;
             int columnCounter = 0;
 
@@ -214,11 +236,11 @@ int ImageBytes = 113;
         private void CreateBox(int X, int Y, int boxSize, bool Value)
         {
 
-            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
 
             if (Value)
             {
-                myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+                myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
             }
 
             Graphics MyGraphics;
